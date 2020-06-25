@@ -7,6 +7,15 @@ spring:
 spring:
   profiles: dev,local
 eureka:
+  instance:
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+---
+spring:
+  profiles: localZipkin
+  zipkin:
+    base-url: http://localhost:9411/
