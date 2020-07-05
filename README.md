@@ -12,6 +12,6 @@ Starting eDiscovery instance with "dev" profile
 ```sh
 $ cd target
 ...
-$ java -jar ediscovery-{version}.jar -Dspring.profile.active=dev
+$ java -jar ediscovery-{version}.jar --spring.profiles.active=dev
 ```
 Access eDiscovery by http://localhost:8761
